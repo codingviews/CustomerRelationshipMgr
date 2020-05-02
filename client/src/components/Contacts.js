@@ -6,13 +6,13 @@ export default class Contacts extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      contacts: []
+      contacts: [],
     };
   }
 
   componentDidMount() {
     fetch('http://localhost:8200/api/contacts')
-    .then(response => response.json)
+    .then(response => response.json())
     .then(data => this.setState({contacts: data}));
   }
 
